@@ -1,3 +1,10 @@
-h1 {
-    color: #E91E63; 
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.content {
+  padding: 8px;
+  color: #E91E63;
 }
