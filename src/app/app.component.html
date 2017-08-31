@@ -12,3 +12,7 @@
 
   <app-ease-in [visible]="visible"></app-ease-in>
 </div>
+
+<div id="fade">
+  <button md-button class="mat-raised-button mat-primary" [@fade]='state' (click)="fade()">fade</button>
+</div>
