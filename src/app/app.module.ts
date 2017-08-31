@@ -7,10 +7,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdToolbarModule} from '@angular/material';
 
 import {AppComponent} from './app.component';
+import { EaseInComponent } from './ease-in/ease-in.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EaseInComponent
   ],
   imports: [
     BrowserModule,
