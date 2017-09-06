@@ -10,20 +10,21 @@ import {MdButtonModule, MdToolbarModule} from '@angular/material';
 import {AppComponent} from './app.component';
 import { EaseInComponent } from './ease-in/ease-in.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { AboutPageComponent } from './about-page/about-page.component';
+import { AnimationPageComponent } from './animation-page/animation-page.component';
+import { appRoutes } from './routes';
 
 @NgModule({
   declarations: [
     AppComponent,
     EaseInComponent,
     HomePageComponent,
-    AboutPageComponent
+    AnimationPageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule,
+    RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
 
     MdButtonModule,

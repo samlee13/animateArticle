@@ -1,13 +1,13 @@
-
+import { Routes } from '@angular/router';
 import {HomePageComponent} from './home-page/home-page.component';
-import {AboutPageComponent} from './about-page/about-page.component';
+import {AnimationPageComponent} from './animation-page/animation-page.component';
 
-export const ROUTES = [
-  { path: '', component: HomePageComponent,
+export const appRoutes = [
+  { path: 'home', component: HomePageComponent,
     data: { animation: 'homePage' }
   },
 
-  { path: '/about', component: AboutPageComponent,
-    data: { animation: 'aboutPage' }
+  { path: 'animations', component: AnimationPageComponent,
+    data: { animation: 'animationPage' }
   }
 ];

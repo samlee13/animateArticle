@@ -2,13 +2,13 @@ import {Component, EventEmitter} from '@angular/core';
 import {Router, ActivatedRoute, RouterOutlet, NavigationEnd, NavigationStart} from '@angular/router';
 import {animation, animateChild, trigger, group, transition, animate, style, query} from '@angular/animations';
 
-import { fade, x } from './shared/animations';
+import { fade, grow, flyInOut} from './shared/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  animations: [fade, x ]
+  animations: [fade, grow, flyInOut ]
 })
 
 
@@ -18,8 +18,17 @@ export class AppComponent {
 
   state: string = 'small';
  
+  grow(state){
+    this.state = (this.state === 'small' ? 'large' : 'small');
+  }
+
+
+  flyInOut(state){
+    this.state = (this.state === 'in' ? 'out' : 'in');
+  }
+
+
   fade(state){
-    console.log("it works3");
     this.state = (this.state === 'visible' ? 'invisible' : 'visible');
   }
 }

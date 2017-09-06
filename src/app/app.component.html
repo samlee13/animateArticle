@@ -13,6 +13,14 @@
   <app-ease-in [visible]="visible"></app-ease-in>
 </div>
 
-<div id="fade">
-  <button md-button class="mat-raised-button mat-primary" [@fade]='state' (click)="fade()">fade</button>
-</div>
+
+<nav>
+  <button [@flyInOut]='state' (click)="flyInOut()">
+      <a routerLink="/home" routerLinkActive="active">home</a>
+  </button>
+  
+  <button>
+      <a routerLink="/animations" routerLinkActive="active">animations</a>
+  </button>
+  </nav>
+  <router-outlet></router-outlet>
